@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.title {
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both; /* Enhancement */
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scroll enhancement */
+}
+
+body {
+  background-image: url('bodybg.jpg');
+  background-color: #ffd4a4;
+  background-size: cover; 
+  background-position: center;
+}
+
+header {
+  background-image: url('bgheader.avif');
+  background-size: cover;
+  background-position: full;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  flex-direction: column;
+}
+/* Vintage Dropdown Navigation */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #c7a87a;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: right;
+  margin-bottom: 10px; /* Reduced space between heading and dropdown */
+}
+
+nav {
+  text-align: right; /* Align the dropdown to the right */
+  margin-top: -10px; /* Reduced space between heading and dropdown */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #e8d8b0;
+  color: #3e3e3e;
+  padding: 10px 20px;
+  font-size: 28px;
+  border: 2px solid #b79e74;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #d4c29a;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fffbe6;
+  min-width: 220px;
+  border: 1px solid #b79e74;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #3e3e3e;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3eac2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+header h1 {
+  color: #42230f;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Cinzel', serif; /* Added this line */
+}
+
+header h2 {
+  color: #493628;
+  text-align: center;
+  font-size: 2rem;           /* Enhancement */
+  margin-top: 15px;            /* Enhancement */
+  letter-spacing: 0.8px;       /* Enhancement */
+  font-weight: 400;            /* Enhancement */
+}
+
+.main_content h1 {
+  text-align: center;
+  color: #442f22;
+  margin-top: 4%;
+  font-size: 45px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 40px;
+  position: relative;
+  max-width: 500px;
+
+  box-shadow: 0 40px 60px -6px black;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Enhancement */
+  border-radius: 12px; /* Enhancement */
+  background-color: rgb(255, 255, 255); /* optional to improve visibility */
+    padding-bottom: 20px; /* add space for button */
+}
+
+.card-title {
+  display: block;
+  text-align: center;
+  color: #fff;
+   font-size: 2rem;
+  background-color: #492401;
+  padding: 2%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.card img {
+  width: 100%;
+  height: 98%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.card-desc {
+  display: block;
+  font-size: 1.1rem; /* Updated font-size */
+  color: #555;
+  text-align: justify; /* Ensures the text is aligned properly */
+  white-space: normal; /* Allow the text to wrap */
+  overflow: visible; /* Allow text to be fully visible */
+  margin-top: 10px; /* Space between text and image */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 0;
+  padding: 18px 8%;
+  background-color: rgb(246, 213, 155);
+  overflow-y: scroll;
+  transition: opacity 0.8s ease, height 0.8s ease, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4); 
+}
+
+.card:hover .card-desc {
+  opacity: 1;
+  height: 100%;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 500%; /* Adjusted width */
+  margin-top: 30px;
+}
+
+/* Carousel track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Adjusted width */
+}
+
+/* Carousel buttons */
+.carousel-btn {
+  position: absolute;
+  top: 28%;
+  transform: translateY(-50%);
+  background: #492401;
+  color: white;
+  border: none;
+  font-size: 5rem;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.8;
+  border-radius: 50%;
+  display: block; /* Buttons will always be visible */
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 70px 0 20px 0;
+  text-align: center;
+}
+
+
+
+/* Second carousel styles */
+.second-carousel {
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+.second-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
+}
+
+.second-track .card {
+  width: 500px;
+  margin: 0 20px;
+}
+
+.second-prev, .second-next {
+  font-size: 5em;
+  padding: 20px;
+}
+
+.second-prev {
+  left: 0;
+}
+
+.second-next {
+  right: 0;
+}
+
+/* Ensuring the carousel container adjusts to the screen width */
+.carousel-container,
+.second-carousel {
+  max-width: 100%;
+  overflow: visible;
+  margin-top: 10px;
+}
+
+.musuems h1 {
+  color: #6f4e37;
+}
+
+
+.card-button {
+  display: inline-block;
+  margin: 20px auto 0;
+  margin-left: 165px;
+  margin-bottom: 10px;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  text-align: center;
+  color: #f8f1e4;
+  background: linear-gradient(145deg, #6e4f31, #3f2e1b);
+  border: 1px solid #bfa88f;
+  border-radius: 30px;
+  box-shadow: 0 6px 14px rgba(60, 40, 20, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+  transition: all 0.6s ease-in-out;
+}
+
+.card-button:hover::before {
+  left: 100%;
+}
+
+.card-button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(145deg, #543a24, #2e2014);
+  box-shadow: 0 8px 18px rgba(30, 20, 10, 0.5);
+  border-color: #d3ba9c;
+}
+
+.card-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+/*button tof redirecting from pg1 to pg2*/
+.archive-section {
+  margin-top: 5%;
+  background: linear-gradient(135deg, #f9f7f3, #fffefa);
+  border-top: 2px solid #35260e;
+  padding: 40px 60px;
+  width: 100%;
+  text-align: center;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.archive-banner {
+  background: #e1c699;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.archive-heading {
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  margin: 0;
+  color: #3e2f1c;
+}
+
+.archive-text {
+  font-size: 25px;
+  margin: 20px 0;
+  color: #444;
+}
+
+.archive-button {
+  display: inline-block;
+  padding: 28px 120px;
+  font-size: 30px;
+  background-color: #a65f3d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.archive-button:hover {
+  background-color: #874e32;
+}
+
+/* Chat toggle button */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 14px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+#chat-toggle:hover {
+  background: #388e3c;
+}
