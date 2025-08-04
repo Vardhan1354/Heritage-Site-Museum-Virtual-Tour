@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Spectral&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spectral', serif;
+  /*background: #ca6d09;*/
+  background-image: url('newspaperbgpage2.png');
+  color: #2e2b23;
+  line-height: 1.6;
+  padding: 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #e3e0d9;
+  letter-spacing: 2px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #e7dfd1;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+.article-card {
+  background: #fff8e6;
+  border: 1px solid #d4c9b2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.4s ease;
+  animation: fadeUp 1.2s ease forwards;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+  background: #fff2d1;
+}
+
+.article-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #3c342a;
+  font-size: 1.6rem;
+}
+
+.article-card .date {
+  color: #90897b;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.article-card .summary {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #a59d8d;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
+.search-container {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.search-container input {
+  padding: 10px 15px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #d2c6af;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Spectral', serif;
+  background-color: #fff8e6;
+  color: #3e3a32;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  background-color: #fff2d1;
+  box-shadow: 0 0 8px rgba(200, 180, 130, 0.4);
+}
+.read-btn {
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 15px;
+  padding: 8px 14px;
+  background-color: #925d08;
+  color: white;
+  font-family: 'Spectral', serif;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.read-btn:hover {
+  background-color: #442b03;
+  transform: translateY(-2px);
+}
